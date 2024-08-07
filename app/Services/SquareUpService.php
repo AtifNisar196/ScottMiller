@@ -28,7 +28,7 @@ class SquareUpService
         if ($user) {
             $response = Http::withHeaders([
                 'Square-Version' => '2024-06-04',
-                'Authorization' => 'Bearer EAAAlzK78mE26JXKlk-iWA2ArfA41Tqq5pz0nxsE7rL0IA1Hvn1kvO2pWq2LGtYf',
+                'Authorization' => $this->bearerToken,
                 'Content-Type' => 'application/json',
             ])->post('https://connect.squareup.com/v2/customers', [
                 'given_name' => 'Amelia',
